@@ -1,10 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getSession } from 'next-auth/react';
 
-export const StravaApi = async (req: NextApiRequest, res: NextApiResponse) => {
+const StravaApi = async (req: NextApiRequest, res: NextApiResponse) => {
   const session = await getSession({ req });
   const { path } = req.query;
-  console.log(`path`, path);
 
   // User is signed in and req a valid api path
   if (path.length && session) {
@@ -26,3 +25,5 @@ export const StravaApi = async (req: NextApiRequest, res: NextApiResponse) => {
   }
   res.end();
 };
+
+export default StravaApi;

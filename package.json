@@ -69,6 +69,7 @@
     "lint-staged": "12.1.7",
     "next-auth": "4.1.2",
     "prettier": "2.5.1",
+    "strava-v3": "2.1.0",
     "typescript": "4.5.5"
   },
   "config": {
