@@ -5,13 +5,16 @@ import { ChakraProvider } from '@chakra-ui/react';
 // Context
 import { UserProvider } from '@/context/UserContext';
 
+// Theme
+import theme from '@/theme';
+
 export default function MyApp({
   Component,
   pageProps: { session, ...pageProps },
 }: AppProps) {
   return (
     <SessionProvider session={session}>
-      <ChakraProvider>
+      <ChakraProvider theme={theme}>
         <UserProvider>
           <Component {...pageProps} />
         </UserProvider>

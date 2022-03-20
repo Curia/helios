@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Header } from './Header';
+import { GlobalHeader } from '../components/GlobalHeader';
 import './page.css';
 
 interface PageProps {
@@ -17,7 +17,7 @@ export const Page = ({
   onCreateAccount,
 }: PageProps) => (
   <article>
-    <Header
+    <GlobalHeader
       user={user}
       onLogin={onLogin}
       onLogout={onLogout}
